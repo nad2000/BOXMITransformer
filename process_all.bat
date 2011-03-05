@@ -1,0 +1,1 @@
+FOR %%f IN (*.xml) DO process_xmi.bat %%f
