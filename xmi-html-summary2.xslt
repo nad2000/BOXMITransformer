@@ -198,6 +198,20 @@
 			<xsl:apply-templates select="CWM:Namespace.ownedElement/CWMRDB:ForeignKey" />
 
 		</xsl:for-each>
+
+		<ul>
+			<xsl:for-each select="//CWMRDB:Table">
+				<xsl:sort select="@name"/>
+				<li>
+					<xsl:variable
+						name="desc" 
+						select="UML:ModelElement.taggedValue/UML:TaggedValue[@tag='TechnicalDescription']/@value"/>
+					<xsl:if test="$desc"><xsl:value-of select="$desc"/></xsl:if> ( <xsl:value-of select="@name"/>)
+				</li>
+			</xsl:for-each>
+		</ul>
+		
+		
 		<xsl:message>
 			Number of tables: <xsl:value-of select="count(//CWMRDB:Table)"/>
 		</xsl:message>

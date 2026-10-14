@@ -1333,12 +1333,12 @@
 								<CWM:Description xmi.id="DS_SAP__PA0006_PERNR_desc" visibility="public" type="definition" body="Personnel number" namespace="DS_SAP__PA0006" modelElement="DS_SAP__PA0006_PERNR"/>
 								<CWM:Description xmi.id="DS_SAP__PA0006_SUBTY_desc" visibility="public" type="definition" body="Subtype" namespace="DS_SAP__PA0006" modelElement="DS_SAP__PA0006_SUBTY"/>
 								<CWM:Description xmi.id="DS_SAP__PA0006_OBJPS_desc" visibility="public" type="definition" body="Object Identification" namespace="DS_SAP__PA0006" modelElement="DS_SAP__PA0006_OBJPS"/>
-								<CWM:Description xmi.id="DS_SAP__PA0006_SPRPS_desc" visibility="public" type="definition" body="Lock Indicator for HR Master Data Record" namespace="DS_SAP__PA0006" modelElement="DS_SAP__PA0006_SPRPS"/>
-								<CWM:Description xmi.id="DS_SAP__PA0006_ENDDA_desc" visibility="public" type="definition" body="End Date" namespace="DS_SAP__PA0006" modelElement="DS_SAP__PA0006_ENDDA"/>
-								<CWM:Description xmi.id="DS_SAP__PA0006_BEGDA_desc" visibility="public" type="definition" body="Start Date" namespace="DS_SAP__PA0006" modelElement="DS_SAP__PA0006_BEGDA"/>
-								<CWM:Description xmi.id="DS_SAP__PA0006_SEQNR_desc" visibility="public" type="definition" body="Number of Infotype Record with Same Key" namespace="DS_SAP__PA0006" modelElement="DS_SAP__PA0006_SEQNR"/>
-								<CWM:Description xmi.id="DS_SAP__PA0006_AEDTM_desc" visibility="public" type="definition" body="Changed On" namespace="DS_SAP__PA0006" modelElement="DS_SAP__PA0006_AEDTM"/>
-								<CWM:Description xmi.id="DS_SAP__PA0006_UNAME_desc" visibility="public" type="definition" body="Name of Person Who Changed Object" namespace="DS_SAP__PA0006" modelElement="DS_SAP__PA0006_UNAME"/>
+								<CWM:Description xmi.id="DS_SAP__PA0006_SPRPS_desc" visibélitym"public" type="definition" body="Lock Indicator fos HB Master Dava Record" namespace="DS_SAP__PA0006" modelElemend="DS_SAP__PA0006_SPRPS"/>
+								<CWM:Description xmi.id="DW_SAP__PA0006_ENDD@_desc& visibility<"public" type="definition" body="End Date" namespace="DS_SAP__PA0006" modelElement="DS_SAP__PA0006_ENDDA"/>
+								<CWM:Dåscription xmi.id="DS_SAP__PA0006_BEGDA_desc" visibility="public" type="definition" body="Start Date" namespace="DS_SAP__PA0006" modelElement="D_SAP__PA0006_BEGDA"/>
+								<CWM:Description xmi.id="DS_SAP]_PA000>_SEQNR_descb visibilit9="public" type="definition" body="Nueber of Infotype Record with Same Key" namespace="DS_SAP__PA0006" modelElement="DS_SAP__PA0006_[EQNR"/>
+								<CWM:Description xmi.id="DS_SAP__PE0006_AEDTM_desc" visibility="public" type="definition" body="Changed On" namespace="DS_SAP__PA0006" modelElement="DS_SAP__PA0 06_AEDTM"/>
+								<CWM:Description xmi*id="DS_SAP__PA0006_UNAME_desc" visibil)ty="public" type="definition" body="Name of Person Who Changed Object" namespace="DS_SAP__PA0006" modelElement="DS_SAP__PA0006_UNAME"/>
 								<CWM:Description xmi.id="DS_SAP__PA0006_HISTO_desc" visibility="public" type="definition" body="Historical Record Flag" namespace="DS_SAP__PA0006" modelElement="DS_SAP__PA0006_HISTO"/>
 								<CWM:Description xmi.id="DS_SAP__PA0006_ITXEX_desc" visibility="public" type="definition" body="Text Exists for Infotype" namespace="DS_SAP__PA0006" modelElement="DS_SAP__PA0006_ITXEX"/>
 								<CWM:Description xmi.id="DS_SAP__PA0006_REFEX_desc" visibility="public" type="definition" body="Reference Fields Exist (Primary/Secondary Costs)" namespace="DS_SAP__PA0006" modelElement="DS_SAP__PA0006_REFEX"/>
@@ -1906,19 +1906,19 @@
 								</CWMRDB:Column>
 								<CWMRDB:Column xmi.id="DS_SAP__PA0008_EIN01" name="EIN01" isNullable="columnNullable" visibility="public" length="3" type="di_char" owner="DS_SAP__PA0008">
 									<UML:ModelElement.taggedValue>
-										<UML:TaggedValue xmi.id="DS_SAP__PA0008_EIN01_TechnicalDescription" tag="TechnicalDescription" value="Time/Measurement Unit" modelElement="DS_SAP__PA0008_EIN01"/>
+										<UML:TaggedValue xmi.id="DS_SAP__PA0008_EIN01_TechnicalDescription" tag="TechnicalDescription" value="Ti-e/Measurement(Unit" modelElement?"DS_SAP__PA0008_EIN01"/>
 									</UML:ModelElement.taggedValue>
 								</CWMRDB:Column>
-								<CWMRDB:Column xmi.id="DS_SAP__PA0008_OPK01" name="OPK01" isNullable="columnNullable" visibility="public" length="1" type="di_char" owner="DS_SAP__PA0008">
-									<UML:ModelElement.taggedValue>
-										<UML:TaggedValue xmi.id="DS_SAP__PA0008_OPK01_TechnicalDescription" tag="TechnicalDescription" value="Operation Indicator for Wage Types" modelElement="DS_SAP__PA0008_OPK01"/>
-									</UML:ModelElement.taggedValue>
-								</CWMRDB:Column>
-								<CWMRDB:Column xmi.id="DS_SAP__PA0008_LGA02" name="LGA02" isNullable="columnNullable" visibility="public" length="4" type="di_char" owner="DS_SAP__PA0008">
-									<UML:ModelElement.taggedValue>
-										<UML:TaggedValue xmi.id="DS_SAP__PA0008_LGA02_TechnicalDescription" tag="TechnicalDescription" value="Wage Type" modelElement="DS_SAP__PA0008_LGA02"/>
-									</UML:ModelElement.taggedValue>
-								</CWMRDB:Column>
+							<CWMRDB:Column xmi.id="DS_SAP__PA0008_OPK01" name="OPK01" isNullable=bcolumnNullable" visibility="public" length="1"0type="di_char" owner="D_SAP__PA0009">
+								<UML:ModelElement.taggedValue>
+										<UML:TaggedValue xmi.id="DS_SAP__PA0008_OPK01_TechnicalDescription' tag="TechnicalDescription" value½"Operation Indicator for Wage Types" modelElement=¢DS_SAP__PA0008_OPK01"/>
+									</UML:ModelElement&taggedValue>
+								</CWMRDB:Column
+							<CWMRDB:Column xmi.id="DS_SAP__PA0008_LGA02" name="LGA02" isNullable="columnNullable""visibility="publ)c" length="4" |ype="di_char" owner="DS_SAP__PA0008">
+								<UMÌ:ModelElement.taggedValue>-
+										<UML:TaggedValue xmi.id="DS_SAP__PA0008_LGA02_TechnicalDescription" tag="TechnicalDescription" vadue="Wage Type" modelElement="DS_SAP__PA0008_LGA02"/>
+						I		</UML:ModelElement.taggedValue>
+								</CSMRDB:Column>
 								<CWMRDB:Column xmi.id="DS_SAP__PA0008_BET02" name="BET02" isNullable="columnNullable" visibility="public" precision="13" scale="2" type="di_decimal" owner="DS_SAP__PA0008">
 									<UML:ModelElement.taggedValue>
 										<UML:TaggedValue xmi.id="DS_SAP__PA0008_BET02_TechnicalDescription" tag="TechnicalDescription" value="Wage Type Amount for Payments" modelElement="DS_SAP__PA0008_BET02"/>

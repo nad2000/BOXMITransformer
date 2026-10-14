@@ -1,26 +1,31 @@
-#-------------------------------------------------------------------------------
-# Name:        module1
-# Purpose:
+﻿#-------------------------------------------------------------------------------
+# Name:        process_xmi.py
+# Purpose:	   Data collecttion from SAP BusinessObject DATA SERVICES XI
+#			   DI CWM 1.0 XML/XMI 1.1 Metadata export file
+#			   Sample that demonstrats Expat and sqlite3 application for real life
+#              situation.
 #
 # Author:      Radomirs Cirskis
 #
 # Created:     26/02/2011
-# Copyright:   (c) Owner 2011
-# Licence:     <your licence>
+# Copyright:   (c) Radomirs Cirskis 2011
+# Licence:     CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)
 #-------------------------------------------------------------------------------
 #!/usr/bin/env python
 
 from xml.parsers import expat
 import sqlite3
 
-# Constants
+# Module Constants
+# Name spaces:
 nsCWM = 'org.omg.CWM1.0/ObjectModel'
 nsUML = 'org.omg.CWM1.0/Core'
 nsCWMRDB = 'org.omg.CWM1.0/Relational'
 
+# namespace and tag name separator:
 xmlnsSeparator = '#'
 
-# element/tag names:
+# element/tag full names:
 tagTable = nsCWMRDB+xmlnsSeparator+'Table'
 tagSQLSimpleType = nsCWMRDB+xmlnsSeparator+'SQLSimpleType'
 tagColumn = nsCWMRDB+xmlnsSeparator+'Column'
@@ -42,7 +47,7 @@ class XMIParser:
         self._mode = None
 
     def _initDb(self):
-        self._cn = sqlite3.connect('C:\\DATA\\shmuz.sqlite')
+        self._cn = sqlite3.connect('output\\model.sqlite')
         self._cn.executescript("""
 DROP TABLE IF EXISTS tmp$table;
 CREATE TABLE IF NOT EXISTS tmp$table (
@@ -101,8 +106,6 @@ CREATE TABLE IF NOT EXISTS tmp$desc (
             self._tableVisibility = attrs['visibility']
 
         elif tag == tagColumn:
-            # isNullable="columnNoNulls" visibility="public" length="3"
-            # type="di_char" owner="DS_SAP__PA0000"
             typeId = attrs['type']
             tableId = attrs['owner']
             dataType = self._dataTypes[ typeId ] if typeId in self._dataTypes else typeId
@@ -116,9 +119,6 @@ CREATE TABLE IF NOT EXISTS tmp$desc (
             ( id, tableId, name, dataType, isNullable, length, precision, scale,) )
 
         elif tag == tagDescription:
-            # <CWM:Description xmi.id="DS_SAP__PA0000_desc" visibility="public"
-            # type="definition" body="HR Master Record: Infotype 0000 (Actions)"
-            # namespace="DS_SAP__PA0000" modelElement="DS_SAP__PA0000"/>
             elementId = attrs['modelElement']
             body = attrs['body']
             self._cn.execute(
@@ -147,18 +147,15 @@ CREATE TABLE IF NOT EXISTS tmp$desc (
                 ( self._tableId, self._catalog, self._tableName) )
         elif tag == tagPrimaryKey:
             self._mode = None
-        # print ("END", repr(tag) )
         pass
 
     def data(self, data):
-        # print( "DATA", repr(data) )
+		# Not used
         pass
 
 def main():
     p = XMIParser()
-##    p.feed("""<?xml version="1.0"?>
-##    <XXX:tag xmlns:XXX='uri:muri:duri' XXX:a='xxx' a='yyy' >data</XXX:tag>""")
-    p.feedFile("C:\\DATA\\DS_SAP_repo_export.xml")
+    p.feedFile( "sample_xmi.xml")
     p.close()
     pass
 
