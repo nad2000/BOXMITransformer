@@ -1,4 +1,5 @@
 README
+======
 
 A demonstration of what could be achieved with Business Object Model export into XMI using diverse amalgam of tools and technologies. I was using the tool-kit to generate documentation about SAP objects and collect data for further analysis.
 
